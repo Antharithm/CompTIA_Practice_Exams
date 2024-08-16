@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CompTIA IT Fundamentals Practice Exam</title>
+    <style>
+      .correct {
+        color: green;
+      }
+      .incorrect {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CompTIA IT Fundamentals Certification Practice Exam</h1>
+    <form id="quiz-form">
+      <ol>
+        <!-- Question 1 -->
+        <li>
+          <p>
+            Which of the following is used for temporary storage of program data
+            that is cleared when the computer is turned off?
+          </p>
+          <input type="radio" name="q1" value="A" /> CPU<br />
+          <input type="radio" name="q1" value="B" /> SSD<br />
+          <input type="radio" name="q1" value="C" /> Hard drive<br />
+          <input type="radio" name="q1" value="D" /> System memory<br />
+        </li>
+        <!-- Question 2 -->
+        <li>
+          <p>
+            Which of the following methods of patching allows for vendor
+            controlled updates, reduced user interaction, and increased security
+            of the operating system or application?
+          </p>
+          <input type="radio" name="q2" value="A" /> Upgrading on a periodic
+          basis<br />
+          <input type="radio" name="q2" value="B" /> Frequent patching<br />
+          <input type="radio" name="q2" value="C" /> Automatic updates<br />
+          <input type="radio" name="q2" value="D" /> Patching scheduled daily<br />
+        </li>
+        <!-- Question 3 -->
+        <li>
+          <p>
+            Which of the following security threats would the use of cable locks
+            reduce?
+          </p>
+          <input type="radio" name="q3" value="A" /> Shoulder surfing<br />
+          <input type="radio" name="q3" value="B" /> Phishing<br />
+          <input type="radio" name="q3" value="C" /> Hardware theft<br />
+          <input type="radio" name="q3" value="D" /> Dumpster diving<br />
+        </li>
+        <!-- Additional questions can be added here similarly -->
+        <!-- Question 4 -->
+        <li>
+          <p>
+            Which of the following is a reason why password complexity is a best
+            practice?
+          </p>
+          <input type="radio" name="q4" value="A" /> It makes passwords harder
+          to crack.<br />
+          <input type="radio" name="q4" value="B" /> It encourages users to
+          write down passwords so they are not forgotten.<br />
+          <input type="radio" name="q4" value="C" /> It forces users to develop
+          typing skills.<br />
+          <input type="radio" name="q4" value="D" /> It discourages users from
+          using the same password with different accounts.<br />
+        </li>
+        <!-- Question 5 -->
+        <li>
+          <p>
+            A user receives an email containing a link. When they hover the
+            mouse over the link, the actual URL does not match the text in the
+            body of the email and appears to be a string of random characters.
+            Which of the following is the BEST course of action?
+          </p>
+          <input type="radio" name="q5" value="A" /> Forward the email to a
+          friend to ask for advice.<br />
+          <input type="radio" name="q5" value="B" /> Reply to the sender asking
+          for confirmation that it is safe to open.<br />
+          <input type="radio" name="q5" value="C" /> Delete the email without
+          clicking on the link.<br />
+          <input type="radio" name="q5" value="D" /> Click the link because
+          malware protection software is installed on the computer.<br />
+        </li>
+      </ol>
+      <button type="button" onclick="checkAnswers()">Check Answers</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+      function checkAnswers() {
+        const answers = {
+          q1: "D",
+          q2: "C",
+          q3: "C",
+          q4: "A",
+          q5: "C",
+        };
+
+        let score = 0;
+        let totalQuestions = Object.keys(answers).length;
+        let resultContent = "";
+
+        for (let question in answers) {
+          const userAnswer = document.querySelector(
+            `input[name="${question}"]:checked`
+          );
+          const questionText = document
+            .querySelector(`input[name="${question}"]`)
+            .closest("li")
+            .querySelector("p").textContent;
+          if (userAnswer && userAnswer.value === answers[question]) {
+            score++;
+            resultContent += `<p class="correct">${questionText} - Correct!</p>`;
+          } else {
+            const correctAnswer = answers[question];
+            resultContent += `<p class="incorrect">${questionText} - Incorrect. The correct answer is: ${correctAnswer}.</p>`;
+          }
+        }
+
+        const resultText = `You got ${score} out of ${totalQuestions} correct.`;
+        resultContent = `<h3>${resultText}</h3>` + resultContent;
+        document.getElementById("result").innerHTML = resultContent;
+      }
+    </script>
+  </body>
+</html>
