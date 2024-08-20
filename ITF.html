@@ -212,7 +212,7 @@
           <br />
           <input type="radio" , name="q14" value="C" /> To prevent social
           engineering attacks<br />
-          <input type="radio" , name="q14" value="D" /> o increase wireless
+          <input type="radio" , name="q14" value="D" /> To increase wireless
           signal strength<br />
         </li>
         <!-- Question 15 -->
@@ -253,7 +253,8 @@
           <input type="radio" , name="q17" value="A" /> System case <br />
           <input type="radio" , name="q17" value="B" /> Power supply
           <br />
-          <input type="radio" , name="q17" value="C" /> Motherboard />
+          <input type="radio" , name="q17" value="C" /> Motherboard
+          <br />
           <input type="radio" , name="q17" value="D" /> Expansion card <br />
         </li>
         <!-- Question 18 -->
@@ -351,12 +352,11 @@
             Which of the following connector types can be used by both mice and
             keyboards? (Select TWO).
           </p>
-          <input type="radio" , name="q25" value="A" /> Thunderbolt <br />
-          <input type="radio" , name="q25" value="B" /> eSATA
-          <br />
-          <input type="radio" , name="q25" value="C" /> USB<br />
-          <input type="radio" , name="q25" value="D" /> PS/2 <br />
-          <input type="radio" , name="q25" value="E" /> FireWire <br />
+          <input type="checkbox" name="q25" value="A" /> Thunderbolt <br />
+          <input type="checkbox" name="q25" value="B" /> eSATA <br />
+          <input type="checkbox" name="q25" value="C" /> USB <br />
+          <input type="checkbox" name="q25" value="D" /> PS/2 <br />
+          <input type="checkbox" name="q25" value="E" /> FireWire <br />
         </li>
         <!-- Question 26 -->
         <li>
@@ -513,7 +513,7 @@
           q22: "D",
           q23: "B",
           q24: "D",
-          q25: "C",
+          q25: ["C", "D"],
           q26: "B",
           q27: "D",
           q28: "A",
@@ -529,19 +529,29 @@
         let resultContent = "";
 
         for (let question in answers) {
-          const userAnswer = document.querySelector(
+          const userAnswers = document.querySelectorAll(
             `input[name="${question}"]:checked`
           );
+          const questionNumber = question.substring(1); // Extract number from 'q1', 'q2', etc.
           const questionText = document
             .querySelector(`input[name="${question}"]`)
             .closest("li")
             .querySelector("p").textContent;
-          if (userAnswer && userAnswer.value === answers[question]) {
+          const userAnswerValues = Array.from(userAnswers).map(
+            (answer) => answer.value
+          );
+          const correctAnswer = answers[question];
+
+          if (
+            Array.isArray(correctAnswer)
+              ? correctAnswer.every((val) => userAnswerValues.includes(val)) &&
+                userAnswerValues.every((val) => correctAnswer.includes(val))
+              : userAnswerValues.includes(correctAnswer)
+          ) {
             score++;
-            resultContent += `<p class="correct">${questionText} - Correct!</p>`;
+            resultContent += `<p class="correct">Question ${questionNumber}: ${questionText} - Correct!</p>`;
           } else {
-            const correctAnswer = answers[question];
-            resultContent += `<p class="incorrect">${questionText} - Incorrect. The correct answer is: ${correctAnswer}.</p>`;
+            resultContent += `<p class="incorrect">Question ${questionNumber}: ${questionText} - Incorrect. The correct answer is: ${correctAnswer}.</p>`;
           }
         }
 
