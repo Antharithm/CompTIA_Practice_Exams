@@ -16,9 +16,9 @@
   <body>
     <h1>CompTIA IT Fundamentals Certification Practice Exam</h1>
     <form id="quiz-form">
-      <ol>
-        <!-- Question 1 -->
-        <li>
+      <div id="questions-container">
+        <!-- Wrap each question in a div with class "question" -->
+        <div class="question">
           <p>
             Which of the following is used for temporary storage of program data
             that is cleared when the computer is turned off?
@@ -27,9 +27,8 @@
           <input type="radio" name="q1" value="B" /> SSD<br />
           <input type="radio" name="q1" value="C" /> Hard drive<br />
           <input type="radio" name="q1" value="D" /> System memory<br />
-        </li>
-        <!-- Question 2 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following methods of patching allows for vendor
             controlled updates, reduced user interaction, and increased security
@@ -40,9 +39,8 @@
           <input type="radio" name="q2" value="B" /> Frequent patching<br />
           <input type="radio" name="q2" value="C" /> Automatic updates<br />
           <input type="radio" name="q2" value="D" /> Patching scheduled daily<br />
-        </li>
-        <!-- Question 3 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following security threats would the use of cable locks
             reduce?
@@ -51,10 +49,8 @@
           <input type="radio" name="q3" value="B" /> Phishing<br />
           <input type="radio" name="q3" value="C" /> Hardware theft<br />
           <input type="radio" name="q3" value="D" /> Dumpster diving<br />
-        </li>
-        <!-- Additional questions can be added here similarly -->
-        <!-- Question 4 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following is a reason why password complexity is a best
             practice?
@@ -67,9 +63,8 @@
           typing skills.<br />
           <input type="radio" name="q4" value="D" /> It discourages users from
           using the same password with different accounts.<br />
-        </li>
-        <!-- Question 5 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A user receives an email containing a link. When they hover the
             mouse over the link, the actual URL does not match the text in the
@@ -84,9 +79,8 @@
           clicking on the link.<br />
           <input type="radio" name="q5" value="D" /> Click the link because
           malware protection software is installed on the computer.<br />
-        </li>
-        <!-- Question 6 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following components serves as temporary storage for
             computer operations?
@@ -96,9 +90,8 @@
           <br />
           <input type="radio" , name="q6" value="C" /> Random access memory<br />
           <input type="radio" , name="q6" value="D" /> Expansion card <br />
-        </li>
-        <!-- Question 7 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             The extension .rtf is an example of which of the following file
             types?
@@ -108,9 +101,8 @@
           <br />
           <input type="radio" , name="q7" value="C" /> Audio<br />
           <input type="radio" , name="q7" value="D" /> Speadsheet<br />
-        </li>
-        <!-- Question 8 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following is a common way to prevent physical theft of
             a laptop or workstation?
@@ -124,9 +116,8 @@
           skills when entering passwords/PINs.<br />
           <input type="radio" , name="q8" value="D" /> Cable and lock device
           securely attached to a solid object.<br />
-        </li>
-        <!-- Question 9 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             After installing a new software application, a user notices that the
             application launches in demo mode. Which of the following needs to
@@ -141,9 +132,8 @@
           application.<br />
           <input type="radio" , name="q9" value="D" /> Complete the software
           installation.<br />
-        </li>
-        <!-- Question 10 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A user's laptop hard drive contains sensitive information. The user
             often plugs the laptop into the corporate network. A sensitive file
@@ -159,9 +149,8 @@
           the key ring.<br />
           <input type="radio" , name="q10" value="D" /> Set the read-only
           attribute on the files.<br />
-        </li>
-        <!-- Question 11 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A user's government identification number, birth date, and current
             address are considered which of the following?
@@ -171,9 +160,8 @@
           <br />
           <input type="radio" , name="q11" value="C" /> PII<br />
           <input type="radio" , name="q11" value="D" /> HTTPS<br />
-        </li>
-        <!-- Question 12 -->
-        <li>
+        </div>
+        <div class="question">
           <p>Which of the following is the function of a CPU?</p>
           <input type="radio" , name="q12" value="A" /> Encrypts data for remote
           transmission<br />
@@ -184,9 +172,8 @@
           components<br />
           <input type="radio" , name="q12" value="D" /> Provides storage
           location for files<br />
-        </li>
-        <!-- Question 13 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             When trying to activate the operating system, a user receives a
             notice that the software is not genuine. Which of the following
@@ -197,9 +184,8 @@
           <br />
           <input type="radio" , name="q13" value="C" /> Virus attack<br />
           <input type="radio" , name="q13" value="D" /> License theft<br />
-        </li>
-        <!-- Question 14 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A user is configuring a SOHO wireless router. The user should change
             the router's default administrator password for which of the
@@ -214,9 +200,8 @@
           engineering attacks<br />
           <input type="radio" , name="q14" value="D" /> To increase wireless
           signal strength<br />
-        </li>
-        <!-- Question 15 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A user wants to purchase a CAD application that requires 8GB of RAM
             to operate. Which of the following operating system types is
@@ -227,9 +212,8 @@
           <br />
           <input type="radio" , name="q15" value="C" /> 32-bit<br />
           <input type="radio" , name="q15" value="D" /> 64-bit <br />
-        </li>
-        <!-- Question 16 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Several users want to share a common folder with high availability.
             Which of the following devices is BEST to use for this requirement?
@@ -243,9 +227,8 @@
           appliance<br />
           <input type="radio" , name="q16" value="D" /> Firewall with security
           management<br />
-        </li>
-        <!-- Question 17 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following is the component responsible for
             interconnectivity of internal system devices?
@@ -256,9 +239,8 @@
           <input type="radio" , name="q17" value="C" /> Motherboard
           <br />
           <input type="radio" , name="q17" value="D" /> Expansion card <br />
-        </li>
-        <!-- Question 18 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following software types protects a desktop from
             malicious attacks?
@@ -268,9 +250,8 @@
           <br />
           <input type="radio" , name="q18" value="C" /> Diagnostic<br />
           <input type="radio" , name="q18" value="D" /> Screensaver <br />
-        </li>
-        <!-- Question 19 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following internal computer components is used to
             connect video, audio, and network cards?
@@ -280,9 +261,8 @@
           <br />
           <input type="radio" , name="q19" value="C" /> Hard drive<br />
           <input type="radio" , name="q19" value="D" /> Modem <br />
-        </li>
-        <!-- Question 20 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following is MOST important to ensure a computer
             temperature is maintained within normal limits?
@@ -295,9 +275,8 @@
           <input type="radio" , name="q20" value="C" /> Keeping the case open<br />
           <input type="radio" , name="q20" value="D" /> Turning the wireless off
           when not needed<br />
-        </li>
-        <!-- Question 21 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             An employee is using a desk phone that is connected only via a
             network cable. Which of the following technologies is the phone
@@ -308,9 +287,8 @@
           <br />
           <input type="radio" , name="q21" value="C" /> VoIP<br />
           <input type="radio" , name="q21" value="D" /> CDMA <br />
-        </li>
-        <!-- Question 22 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following file types is used to consolidate a group of
             files?
@@ -320,9 +298,8 @@
           <br />
           <input type="radio" , name="q22" value="C" /> .avi<br />
           <input type="radio" , name="q22" value="D" /> .rar <br />
-        </li>
-        <!-- Question 23 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following permissions is required to run a .bat file?
           </p>
@@ -331,9 +308,8 @@
           <br />
           <input type="radio" , name="q23" value="C" /> Write<br />
           <input type="radio" , name="q23" value="D" /> Modify <br />
-        </li>
-        <!-- Question 24 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             After installing the OS on a workstation, a technician notices that
             everything is displayed in large windows and the viewing area is
@@ -345,9 +321,8 @@
           <br />
           <input type="radio" , name="q24" value="C" /> DPI settings<br />
           <input type="radio" , name="q24" value="D" /> Resolution <br />
-        </li>
-        <!-- Question 25 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following connector types can be used by both mice and
             keyboards? (Select TWO).
@@ -357,9 +332,8 @@
           <input type="checkbox" name="q25" value="C" /> USB <br />
           <input type="checkbox" name="q25" value="D" /> PS/2 <br />
           <input type="checkbox" name="q25" value="E" /> FireWire <br />
-        </li>
-        <!-- Question 26 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following will allow the easiest and fastest way to
             share a single file between two modern smartphones without joining
@@ -370,9 +344,8 @@
           <br />
           <input type="radio" , name="q26" value="C" /> USB connection<br />
           <input type="radio" , name="q26" value="D" /> Infrared <br />
-        </li>
-        <!-- Question 27 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             An end-user has 16GB of RAM installed on a computer system. Which of
             the following describes why the OS only uses a maximum of 4GB of
@@ -390,9 +363,8 @@
           <input type="radio" , name="q27" value="E" /> The computer has a
           virus.
           <br />
-        </li>
-        <!-- Question 28 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A technician just installed a new computer. Which of the following
             is the BEST way to manage the cables?
@@ -406,9 +378,8 @@
           wall.<br />
           <input type="radio" , name="q28" value="D" /> Tuck the cables neatly
           underneath the carpet. <br />
-        </li>
-        <!-- Question 29 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A user wants to run a major update on a laptop. Which of the
             following should be considered before running any major updates?
@@ -422,9 +393,8 @@
           folders<br />
           <input type="radio" , name="q29" value="D" /> Print all personal
           documents <br />
-        </li>
-        <!-- Question 30 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following allows for the FASTEST printer connections?
           </p>
@@ -433,9 +403,8 @@
           <br />
           <input type="radio" , name="q30" value="C" /> Parallel<br />
           <input type="radio" , name="q30" value="D" /> Serial <br />
-        </li>
-        <!-- Question 31 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A user needs to establish an initial password for an email account.
             Which of the following is the BEST example of a complex password?
@@ -447,9 +416,8 @@
           <input type="radio" , name="q31" value="C" />
           01c234n56789v9876x21<br />
           <input type="radio" , name="q31" value="D" /> 012iWanttobe210 <br />
-        </li>
-        <!-- Question 32 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following is an advantage of using a 64-bit operating
             system?
@@ -463,9 +431,8 @@
           larger amount of RAM<br />
           <input type="radio" , name="q32" value="D" /> Ability to add two or
           more hard drives <br />
-        </li>
-        <!-- Question 33 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A user has finished browsing the Internet on a public hotel
             workstation. Which of the following steps should be taken to BEST
@@ -480,9 +447,8 @@
           workstation<br />
           <input type="radio" , name="q33" value="D" /> Clear the browser cache,
           cookies and histo <br />
-        </li>
-        <!-- Question 34 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following storage units can be used to represent
             1024MB?
@@ -492,18 +458,16 @@
           <br />
           <input type="radio" , name="q34" value="C" /> 1TB<br />
           <input type="radio" , name="q34" value="D" /> 1PB <br />
-        </li>
-        <!-- Question 35 -->
-        <li>
+        </div>
+        <div class="question">
           <p>An image displayed on a monitor is an example of:</p>
           <input type="radio" , name="q35" value="A" /> input <br />
           <input type="radio" , name="q35" value="B" /> output
           <br />
           <input type="radio" , name="q35" value="C" /> processing<br />
           <input type="radio" , name="q35" value="D" /> storage <br />
-        </li>
-        <!-- Question 36 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A school has a sign posted in the computer lab that says, "Sharing
             passwords with others is prohibited." This is an example of:
@@ -513,9 +477,8 @@
           <br />
           <input type="radio" , name="q36" value="C" /> file sharing<br />
           <input type="radio" , name="q36" value="D" /> instant messaging <br />
-        </li>
-        <!-- Question 37 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             A user buys a new desktop computer and then connects a cable that
             allows the computer to connect to the web. Which of the following
@@ -527,9 +490,8 @@
           <input type="radio" , name="q37" value="C" /> Ethernet<br />
           <input type="radio" , name="q37" value="D" /> Thunderbolt <br />
           <input type="radio" , name="q37" value="E" /> Bluetooth <br />
-        </li>
-        <!-- Question 38 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following would BEST help to protect against
             unauthorized use of a mobile phone?
@@ -542,9 +504,8 @@
           <input type="radio" , name="q38" value="C" /> PIN and screen lock<br />
           <input type="radio" , name="q38" value="D" /> Encrypted messaging and
           time-expiring texts <br />
-        </li>
-        <!-- Question 39 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Ann, a user, connects a new mouse to a laptop, and the mouse works
             with no additional steps taken by Ann. Which of the following
@@ -556,9 +517,8 @@
           <br />
           <input type="radio" , name="q39" value="C" /> Web based<br />
           <input type="radio" , name="q39" value="D" /> Manual <br />
-        </li>
-        <!-- Question 40 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following protocols is used for secure web browsing?
           </p>
@@ -568,9 +528,8 @@
           <br />
           <input type="radio" , name="q40" value="C" /> L2TP<br />
           <input type="radio" , name="q40" value="D" /> IMAP <br />
-        </li>
-        <!-- Question 41 -->
-        <li>
+        </div>
+        <div class="question">
           <p>Which of the following is the MOST secure password?</p>
           <input type="radio" , name="q41" value="A" /> happybirthday12
           <br />
@@ -578,9 +537,8 @@
           <br />
           <input type="radio" , name="q41" value="C" /> H*ppyBirthDay%12<br />
           <input type="radio" , name="q41" value="D" /> HappyBirthDay123 <br />
-        </li>
-        <!-- Question 42 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following computer components is primarily responsible
             for preventing overheating?
@@ -591,9 +549,8 @@
           <br />
           <input type="radio" , name="q42" value="C" /> CPU<br />
           <input type="radio" , name="q42" value="D" /> Firmware <br />
-        </li>
-        <!-- Question 43 -->
-        <li>
+        </div>
+        <div class="question">
           <p>
             Which of the following software licensing types is MOST likely to
             require the renewal of terms/conditions agreements and has annual
@@ -605,13 +562,38 @@
           <br />
           <input type="radio" , name="q43" value="C" /> Group license<br />
           <input type="radio" , name="q43" value="D" /> Subscription <br />
-        </li>
-      </ol>
+        </div>
+      </div>
       <button type="button" onclick="checkAnswers()">Check Answers</button>
     </form>
     <div id="result"></div>
 
     <script>
+      // Function to shuffle array
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+      }
+
+      // Function to shuffle questions
+      function shuffleQuestions() {
+        const questionsContainer = document.getElementById(
+          "questions-container"
+        );
+        const questions = Array.from(
+          questionsContainer.getElementsByClassName("question")
+        );
+        shuffleArray(questions);
+        questions.forEach((question) =>
+          questionsContainer.appendChild(question)
+        );
+      }
+
+      // Call shuffleQuestions when the page loads
+      window.onload = shuffleQuestions;
+
       function checkAnswers() {
         const answers = {
           q1: "D",
